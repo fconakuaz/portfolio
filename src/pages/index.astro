@@ -1,11 +1,53 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Badge from "../components/Badge.astro";
+import SocialPills from "../components/SocialPills.astro";
+import IconEmail from "../icons/IconEmail.astro";
+import IconGithub from "../icons/IconGithub.astro";
+import IconLinkedin from "../icons/IconLinkedin.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Portfolio | Paco Acosta">
+  <main>
+    <section class="w-full mx-auto lg:w-[740px] py-20">
+      <img
+        class="rounded-full w-20 h-20 mb-5"
+        src="paco.jpg"
+        alt="Paco photo"
+      />
+
+      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-8">
+        Hey there!, I'm Paco <a
+          href="https://www.linkedin.com/in/francisco-nak%C3%BA-acosta-z%C3%A1rate-a2693681/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Open to work</Badge>
+        </a>
+      </h1>
+
+      <h2 class="text-xl text-wrap">
+        <span>+16 years of experience.</span><span class="text-yellow-200/90">
+          Full-stack developer.
+        </span><span class="text-violet-200/80">From Xalapa, México.</span>
+        <span class="opacity-90"
+          >Especializado en crear aplicaicones únicas.</span
+        >
+      </h2>
+      <nav class="flex gap-x-4 mt-8">
+        <SocialPills
+          href="https://www.linkedin.com/in/francisco-nak%C3%BA-acosta-z%C3%A1rate-a2693681/"
+        >
+          <IconLinkedin class="w-5 h-5" /> Linkedin
+        </SocialPills>
+        <SocialPills href="https://github.com/fconakuaz">
+          <IconGithub class="w-5 h-5" /> Github
+        </SocialPills>
+        <SocialPills href="https://github.com/fconakuaz">
+          <IconEmail class="w-5 h-5" /> fconakuaz@gmail.com
+        </SocialPills>
+      </nav>
+    </section>
+  </main>
 </Layout>
