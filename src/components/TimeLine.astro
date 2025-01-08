@@ -1,0 +1,31 @@
+---
+import TimeLineItem from "./TimeLineItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "February 2022",
+    title: "Application UI code in Tailwind CSS",
+    description: "Get acces to over 20+ pages including a dashboard layout.",
+    link: "https://www.softtek.com",
+  },
+  {
+    date: "February 2023",
+    title: "Application UI code in Tailwind CSS",
+    description: "Get acces to over 20+ pages including a dashboard layout.",
+  },
+  {
+    date: "February 2024",
+    title: "Application UI code in Tailwind CSS",
+    description: "Get acces to over 20+ pages including a dashboard layout.",
+  },
+  {
+    date: "February 2025",
+    title: "Application UI code in Tailwind CSS",
+    description: "Get acces to over 20+ pages including a dashboard layout.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {EXPERIENCE.map((e) => <TimeLineItem {...e} />)}
+</ol>

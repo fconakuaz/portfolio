@@ -1,0 +1,20 @@
+---
+import IconEmail from "../icons/IconEmail.astro";
+import IconGithub from "../icons/IconGithub.astro";
+import IconLinkedin from "../icons/IconLinkedin.astro";
+import SocialPills from "./SocialPills.astro";
+---
+
+<nav class="flex gap-4 mt-8 flex-wrap">
+  <SocialPills
+    href="https://www.linkedin.com/in/francisco-nak%C3%BA-acosta-z%C3%A1rate-a2693681/"
+  >
+    <IconLinkedin class="size-4 lg:size-5" /> Linkedin
+  </SocialPills>
+  <SocialPills href="https://github.com/fconakuaz">
+    <IconGithub class="size-4 lg:size-5" /> Github
+  </SocialPills>
+  <SocialPills href="mailto:fconakuaz@gmail.com">
+    <IconEmail class="w-5 h-5 lg:w-5 lg:h-5" /> fconakuaz@gmail.com
+  </SocialPills>
+</nav>

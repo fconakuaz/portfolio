@@ -1,0 +1,40 @@
+---
+import IconReact from "../icons/IconReact.astro";
+import Project from "./Project.astro";
+
+const TAGS = {
+  REACT: {
+    name: "ReactJS",
+    class: "bg-[#51d6ff]/60 text-white",
+    icon: IconReact,
+  },
+  NEXT: {
+    name: "NextJS",
+    class: "bg-black text-white",
+    icon: IconReact,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "LOGRA",
+    description: "Get acces to over 20+ pages including a dashboard layout.",
+    link: "https://www.softtek.com",
+    github: "https://www.softtek.com",
+    image: "logra.webp",
+    tags: [TAGS.NEXT, TAGS.REACT],
+    // tags: ["MongoDB", "Express", "React", "NodeJS", "Redux"],
+  },
+  {
+    title: "Application UI code in Tailwind CSS",
+    description: "Get acces to over 20+ pages including a dashboard layout.",
+    link: "https://www.softtek.com",
+    github: "https://www.softtek.com",
+    image: "logra2.webp",
+    // tags: ["MongoDB", "Express", "React", "NodeJS", "Redux"],
+    tags: [TAGS.NEXT, TAGS.REACT],
+  },
+];
+---
+
+{PROJECTS.map((p) => <Project {...p} />)}
